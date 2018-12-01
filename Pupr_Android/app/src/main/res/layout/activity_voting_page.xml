@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VotingPage">
+
+    <LinearLayout
+        android:id="@+id/votingImageLayout"
+        android:layout_width="500dp"
+        android:layout_height="154dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/votingName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.568"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/votingImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:layout_editor_absoluteX="132dp"
+            tools:layout_editor_absoluteY="8dp"
+            tools:srcCompat="@tools:sample/avatars" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/votingName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:focusable="false"
+        android:inputType="none"
+        app:layout_constraintBottom_toTopOf="@+id/votingBio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/votingImageLayout"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/votingBio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:focusable="false"
+        android:inputType="none"
+        android:singleLine="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/votingName" />
+
+    <LinearLayout
+        android:id="@+id/votingButtonLayout"
+        android:layout_width="378dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="28dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/votingHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/one"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="@string/_1"
+            app:layout_constraintEnd_toStartOf="@+id/two"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/two"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="@string/_2"
+            app:layout_constraintEnd_toStartOf="@+id/three"
+            app:layout_constraintStart_toEndOf="@+id/one" />
+
+        <Button
+            android:id="@+id/three"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="@string/_3"
+            app:layout_constraintEnd_toStartOf="@+id/four"
+            app:layout_constraintStart_toEndOf="@+id/two" />
+
+        <Button
+            android:id="@+id/four"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="@string/_4"
+            app:layout_constraintEnd_toStartOf="@+id/five"
+            app:layout_constraintStart_toEndOf="@+id/three" />
+
+        <Button
+            android:id="@+id/five"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="@string/_5"
+            app:layout_constraintStart_toEndOf="@+id/four" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/votingHome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
